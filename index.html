@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="ur">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>دعائیں اور اذکار</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #navbar {
+            background-image: linear-gradient(to left, #42275e, #5c2b29, #16504b);
+            height: 50px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        #navbar ul {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            margin: 0px 10px;
+            font-size: 1rem;
+            font-weight: bold;
+
+        }
+
+        #navbar ul li a {
+            color: #ffffffa6;
+            text-decoration: none;
+            padding: 15px 10px;
+
+        }
+
+        #navbar ul li a:hover {
+            color: #ffffffc9;
+        }
+
+        .active {
+            color: #fff !important;
+        }
+
+        .show {
+            display: block !important;
+        }
+
+        #mainContent {
+            background-color: #f7f5f5;
+            text-align: end;
+            color: white;
+        }
+
+        #mainContent section {
+            padding: 15px;
+            display: none;
+        }
+
+        #mainContent section h2 {
+            color: #007eff;
+            text-align: center;
+        }
+
+        #mainContent section .dua {
+            margin: 30px 0px;
+            border-radius: 8px;
+            padding: 8px 4px;
+
+        }
+
+        #mainContent section .dua:nth-child(3n+1) {
+            background-color: #42275e;
+            box-shadow: 0px 0px 2px 5px #42275e18;
+        }
+
+        #mainContent section .dua:nth-child(3n+2) {
+            background-color: #5c2b29;
+            box-shadow: 0px 0px 2px 5px #5c2b2942;
+        }
+
+        #mainContent section .dua:nth-child(3n+3) {
+            background-color: #16504b;
+            box-shadow: 0px 0px 2px 5px #16504b42;
+        }
+
+        #mainContent section .dua p {
+            margin: 7px;
+            padding: 7px;
+            line-height: 1.5;
+        }
+
+        .arabic {
+            line-height: 2.0 !important;
+            padding: 0px !important;
+        }
+
+        .arabic a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: auto 5px;
+            transition: color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .arabic a:focus {
+            color: green;
+            padding: 5px 2px;
+            border-radius: 5px;
+        }
+
+        .showTranslationBtn {
+            width: 95%;
+            display: block;
+            margin: 15px auto !important;
+            background-color: transparent;
+            color: white;
+            border-radius: 5px;
+            border-color: inherit;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li class="nav-link subahKeAzkar">
+                <a href="#" class="active">صبح کے اذکار</a>
+            </li>
+            <li class="nav-link shaamKeAzkar">
+                <a href="#">شام کے اذکار</a>
+            </li>
+            <li class="nav-link soneSePehleKeAzkar">
+                <a href="#">سونے سے پہلے کے اذکار</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="mainContent">
+        <!--* here will appear subah ke azkar -->
+        <section class="subahKeAzkar show">
+            <h2>صبح کے اذکار</h2>
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/error.mp3', event)">الحمد لله وحده</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/error.mp3', event)">والصلاة والسلام على من
+                        لا نبي بعده</a>
+
+                </p>
+                <p id="reference">أبو داود برقم ۳٦٦۷، وحسنه الألباني ، صحيح أبو داود ۲/ ٦۹۸</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">تمام تعریفیں اللہ کے لئے ہیں جو یکتا ہے، اور درودوسلام اس
+                    پر جس کے بعد کوئی نبی نہیں</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi01.mp3', event)">أَعُوذُ
+                        بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi02.mp3', event)">اللَّهُ لاَ
+                        إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi03.mp3', event)">لاَ
+                        تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi04.mp3', event)">
+                        لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ
+                        بِإِذْنِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi05.mp3', event)">يَعْلَمُ مَا
+                        بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi06.mp3', event)">وَلاَ
+                        يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi07.mp3', event)">وَسِعَ
+                        كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi08.mp3', event)">وَهُوَ
+                        الْعَلِيُّ الْعَظِيمُ</a>
+
+                </p>
+                <p id="reference">سورة البقرة ، آية ۲۵۵ من قالها حين يمسي أجير منهم حتى يصبح أخرجه الحاكم ۱/ ۵٦۲وصححه
+                    الألباني في صحيح الترغيب والترهيب ۱/ ۲۷۳ وعزاه إلى النسائي والطبراني وقال : وإسناد الطبراني جيد</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">للہ وہ ذات ہے جس کے سوا کوئی سچا معبود نہیں وہ زندہ جاوید
+                    ہمیشہ قائم رہنے والا ہے۔ اسے اونگھ آتی ہے نہ نیند۔اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین
+                    میں ہے۔ کون ہے وہ جو اسکے ہاں اسکی اجازت کے بغیر (کسی کی) سفارش کرسکے؟ وہ ان چیزوں کو جانتا ہے جو ان
+                    کے سامنے ہیں اور جو انکے پیچھے ہیں۔ اور وہ (لوگ) اس کے علم میں سے کسی چیز پر دسترس نہیں رکھتے تاہم
+                    جس قدر وہ خود چاہے۔ اس کی کرسی حاوی ہے۔ آسمانوں اور زمین پر اور نہیں گراں گزرتی اسے حفاظت ان دونوں
+                    کی اور وہ بلند مرتبہ ہے عظمت والا ہے۔ </p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas02.mp3', event)">قُلْ
+                        هُوَ
+                        اللّٰہُ اَحَدٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas03.mp3', event)">اَللّٰہُ
+                        الصَّمَدُ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas04.mp3', event)">لَمْ
+                        یَلِدْ
+                        وَلَمْ یُوْلَدْ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas05.mp3', event)">وَلَمْ
+                        یَکُنْ لَّـهُ کُفُوًا اَحَدٌ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۲ والترمذي ۵/ ۵٦۷ وانظر صحيح الترمذي ۳/ ۱۸۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ وہ اللہ ایک ہے۔ اللہ بے نیاز ہے۔ نہ اسکی کوئی اولاد ہے اور نہ وہ کسی کی
+                    اولاد، اور نہ ہی کوئی اس کا ساتھی ہے۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq02.mp3', event)">قُلْ
+                        اَعُوْذُ بِرَبِّ الْفَلَقِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq03.mp3', event)">مِنْ
+                        شَرِّ مَا خَلَقَ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq04.mp3', event)">وَمِنْ
+                        شَرِّ
+                        غَاسِقٍ اِذَا وَقَبَ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq05.mp3', event)">وَمِنْ
+                        شَرِّ
+                        النَّفّٰثٰتِ فِی الْعُقَدِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq06.mp3', event)">وَمِنْ
+                        شَرِّ
+                        حَاسِدٍ اِذَا حَسَدَ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۲ والترمذي ۵/ ۵٦۷ وانظر صحيح الترمذي ۳/ ۱۸۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ میں پناہ چاہتا ہوں صبح کے رب کی، اس چیز کے شر سے جو اس نے پیدا کی اور
+                    اندھیرا کرنے والے کے شر سے جب وہ چھپ جائے۔ اور گرہوں میں پھونکنے والیوں کے شر سے اور حسد کرنے والے
+                    کے شر سے جب وہ حسد کرے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas02.mp3', event)">قُلْ
+                        اَعُوْذُ بِرَبِّ النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas03.mp3', event)">مَلِکِ
+                        النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas04.mp3', event)">اِلٰـهِ
+                        النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas05.mp3', event)">مِنْ
+                        شَرِّ الْوَسْوَاسِ الْخَنَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas06.mp3', event)">الَّذِیْ
+                        یُوَسْوِسُ فِیْ صُدُوْرِ النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas07.mp3', event)">مِنَ
+                        الْجِنَّةِ وَالنَّاسِ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۲ والترمذي ۵/ ۵٦۷ وانظر صحيح الترمذي ۳/ ۱۸۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ میں پناہ میں آتا ہوں لوگوں کے رب کی، لوگوں کے بادشاہ کی، لوگوں کے معبود کی،
+                    وسوسہ ڈالنے والے شیطان سے جو آنکھوں سے اوجھل ہے۔ جو وسوسہ ڈالتا ہے لوگوں کے سینوں میں ۔جنوں میں سے
+                    اور انسانوں میں سے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillah/AsbahnaWaAsbahalMulkuLillah01.mp3', event)">أَصْبَحْنَا
+                        وَأَصْبَحَ الْمُلْكُ لِلَّهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillah/AsbahnaWaAsbahalMulkuLillah02.mp3', event)">وَالْحَمْدُلِلَّهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillah/AsbahnaWaAsbahalMulkuLillah03.mp3', event)">لَا
+                        إِلَهَ إِلَّّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillah/AsbahnaWaAsbahalMulkuLillah04.mp3', event)">لَهُ
+                        الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillah/AsbahnaWaAsbahalMulkuLillah05.mp3', event)">رَبِّ
+                        أَسْأَلُكَ خَيْرَ مَا فِيْ هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillah/AsbahnaWaAsbahalMulkuLillah06.mp3', event)">وَأَعُوْذُ
+                        بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillah/AsbahnaWaAsbahalMulkuLillah07.mp3', event)">رَبِّ
+                        أَعُوْذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillah/AsbahnaWaAsbahalMulkuLillah08.mp3', event)">رَبِّ
+                        أَعُوْذُ بِكَ مِنْ عَذَابٍ فِيْ النَّارِ وَعَذَابٍ فِيْ الْقَبْرِ</a>
+
+                </p>
+                <p id="reference">مسلم ۴/ ۲۰۸۸</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">ہم نے اور اللہ کے ملک نے صبح کی اور ہر قسم کی تعریف اللہ
+                    ہی کے لئے ہے۔ اللہ کے علاوہ کوئی (سچا) معبود نہیں۔ وہ اکیلا ہے اس کا کوئی شریک نہیں۔ اسی کی ہی
+                    بادشاہت ہے اور اسی کی ہی تعریف ہے اور وہ ہر چیز پر کامل قدرت رکھتا ہے۔ اے میرے رب! میں تجھ سے اس دن
+                    کی بہتری اور اس کے بعد آنے والے دنوں کی بہتری کا سوال کرتا ہوں اور میں تیری پناہ میں آتا ہوں اس دن
+                    کے شر سے اور اس کے بعد آنے والے دنوں کے شر سے، اے میرے رب میں کاہلی اور بڑھاپے کی خرابی سے تیری پناہ
+                    میں آتا ہوں۔ اے میرے رب! میں تیری پناہ میں آتا ہوں آگ کے عذاب سے اور قبر کے عذاب سے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaBikaAsbahna/AllahumaBikaAsbahna01.mp3', event)">اللَّهُمَّ
+                        بِكَ أَصْبَحْنَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaBikaAsbahna/AllahumaBikaAsbahna02.mp3', event)">وَبِكَ
+                        أَمْسَيْنَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaBikaAsbahna/AllahumaBikaAsbahna03.mp3', event)">وَبِكَ
+                        نَحْيَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaBikaAsbahna/AllahumaBikaAsbahna04.mp3', event)">وَبِكَ
+                        نَمُوتُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaBikaAsbahna/AllahumaBikaAsbahna05.mp3', event)">وَإِلَيْكَ
+                        النُّشُورُ</a>
+
+                </p>
+                <p id="reference">الترمذي ۵/ ۴٦٦ وانظر صحيح الترمذي ۳/ ۱۴۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ تیری ہی توفیق سے ہم نے صبح کی اور تیری ہی توفیق سے
+                    شام اور تیرے ہی نام پر ہم ذندہ ہیں اور تیرے ہی نام پر ہم مریں گے اور تیری طرف ہی لوٹ کر جانا ہے۔
+                </p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi01.mp3', event)">اللَّهُمَّ
+                        أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi02.mp3', event)">خَلَقْتَنِي
+                        وَأَنَا عَبْدُكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi03.mp3', event)">وَأَنَا
+                        عَلَى عَهْدِكَ وَوَعْدِكَ مَااسْتَطَعْتُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi04.mp3', event)">أَعُوذُ
+                        بِكَ مِنْ شَرِّ مَا صَنَعْتُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi05.mp3', event)">أَبُوءُ
+                        لَكَ بِنِعْمَتِكَ عَلَيَّ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi06.mp3', event)">وَأَبُوءُ
+                        بِذَنْبِي فَاغْفِرلِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi07.mp3', event)">فَإِنَّهُ
+                        لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</a>
+
+                </p>
+                <p id="reference">أخرجه البخاري ۷/۱۵۰</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! تو میرارب ہے، تیرے علاوہ کوئی (سچا) معبود نہیں تو
+                    نے مجھے پیدا فرمایا اور میں تیرا بندہ ہوں۔ اور میں اپنی طاقت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔
+                    اپنے کئے کے شر سے تیری پناہ میں آتا ہوں۔ میں اپنے اوپر تیرے انعام کا اقرار کرتا ہوں اور میں اپنے
+                    گناہ کا اقرار کرتا ہوں لہٰذا تو مجھے معاف کردے۔ سچی بات یہ ہے کہ تیرے سوا کوئی بھی گناہ معاف نہیں کر
+                    سکتا</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">چار (4) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaInniAsbahtuUshHiduqa/AllahumaInniAsbahtuUshHiduqa01.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaInniAsbahtuUshHiduqa/AllahumaInniAsbahtuUshHiduqa02.mp3', event)">وَمَلَائِكَتَكَ
+                        وَجَمِيعَ خَلْقِكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaInniAsbahtuUshHiduqa/AllahumaInniAsbahtuUshHiduqa03.mp3', event)">أَنَّكَ
+                        أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaInniAsbahtuUshHiduqa/AllahumaInniAsbahtuUshHiduqa04.mp3', event)">وَحْدَكَ
+                        لَا شَرِيكَ لَكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaInniAsbahtuUshHiduqa/AllahumaInniAsbahtuUshHiduqa05.mp3', event)">وَأَنَّ
+                        مُحَمَّداً عَبْدُكَ وَرَسُولُكَ</a>
+
+                </p>
+                <p id="reference">أخرجه أبو داود ۴/ ۳۱۷ والبخاري في الأدب المفرد برقم ۱۲۰۱ والنسائي في عمل اليوم والليلة
+                    برقم ۹، وابن السني برقم ۷۰ وحسن سماحة الشيخ ابن باز إسناد النسائي وأبي داود في تحفة الأخيار ص ۲۳</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! یقیناََ میں نے ایسی حالت میں صبح کی کہ تجھے گواہ
+                    بناتا ہوں اور تیرا عرش اٹھانے والوں اور تیرے فرشتوں اور تیری تمام مخلوق کو اس اقرار پر گواہ بناتا
+                    ہوں کہ تو ہی اللہ ہے، تیرے سوا کوئی (سچا) معبود نہیں۔ تو اکیلا ہے، تیرا کوئی شریک نہیں۔ اور بلاشبہ
+                    حضرت محمدﷺ تیرے بندے اور تیرے رسول ہیں</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaMaAsbahaBiMinNima/AllahumaMaAsbahaBiMinNima01.mp3', event)">اللَّهُمَّ
+                        مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaMaAsbahaBiMinNima/AllahumaMaAsbahaBiMinNima02.mp3', event)">أَوْ
+                        بِأَحَدٍ مِنْ خَلْقِكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaMaAsbahaBiMinNima/AllahumaMaAsbahaBiMinNima03.mp3', event)">فَمِنْكَ
+                        وَحْدَكَ لَا شَرِيكَ لَكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AllahumaMaAsbahaBiMinNima/AllahumaMaAsbahaBiMinNima04.mp3', event)">فَلَكَ
+                        الْحَمْدُ وَلَكَ الشُّكْرُ</a>
+
+                </p>
+                <p id="reference">أخرجه أبو داود ۴/۳۱۸ ، والنسائي في عمل اليوم والليلة برقم ۷وابن السني برقم ۴۱ وابن
+                    حبان (( موارد)) رقم ۲۳٦۱وحسن ابن باز إسناده في تحفة الأخيار ص۲۴</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! صبح کے وقت مجھ پر یا تیری مخلوق میں سے کسی پر جو
+                    بھی انعام ہوا ہے تو وہ تیری ہی طرف سے ہے۔ تو اکیلا ہے، تیرا کوئی شریک نہیں۔ لہٰذا تیرے لئے ہی حمد ہے
+                    اور تیرے لئے ہی شکر</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani01.mp3', event)">اللَّهُمَّ
+                        عَافِـني فِي بَدَنِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani02.mp3', event)">اللَّهُمَّ
+                        عَافِـنِي فِي سَمْعِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani03.mp3', event)">اللَّهُمَّ
+                        عَافِنِي فِي بَصَرِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani04.mp3', event)">لَا
+                        إِلَهَ إلاَّ أَنْتَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani05.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَعُوذُبِكَ مِنَ الْكُفْر وَالفَقْرِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani06.mp3', event)">وَأَعُوذُبِكَ
+                        مِنْ عَذَابِ الْقَبْرِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani07.mp3', event)">لَا
+                        إلَهَ إلاَّ أَنْتَ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۴، وأحمد ۵/ ۴۲ والنسائي في عمل اليوم والليلة برقم ۲۲وابن السني برقم
+                    ٦۹والبخاري في الأدب المفرد وحسن العلامة ابن باز في تحفة الأخيار ص۲٦</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! مجھے عافیت دیجئے میرے بدن میں۔ اے اللہ! مجھے
+                    عافیت دیجئے میرے کانوں میں۔ اے اللہ! مجھے عافیت دیجئے میری آنکھوں میں۔ آپ کے سوا کوئی (سچا) معبود
+                    نہیں۔ اے اللہ بیشک میں آپکی پناہ میں آتا ہوں کفر اور غربت سے۔ اے اللہ بیشک میں آپکی پناہ میں آتا ہوں
+                    عذابِ قبر سے۔ آپکے سوا کوئی (سچا) معبود نہیں۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">سات (7) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/HasbiYallahu/HasbiYallahu.mp3', event)">حَسْبِيَ
+                        اللَّهُ لَآ إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</a>
+
+                </p>
+                <p id="reference">أخرجه ابن السني برقم ۷۱ مرفوعاً وأبو موقوف ۴/۳۲۱،وصحح إسناده شعيب وعبد القادر
+                    الأرناؤوط . انظر زاد المعاد ۲/ ۳۷٦</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">مجھے اللہ ہی کافی ہے۔ اس کے علاوہ کوئی (سچا) معبود نہیں۔
+                    اسی پر میں نے توکل کیا اور وہ عرشِ عظیم کا رب ہے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah01.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah02.mp3', event)">فِي
+                        الدُّنْيَا وَالْآخِرَةِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah03.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah04.mp3', event)">فِي
+                        دِينِي، وَدُنْيَايَ وَأَهْلِي، وَمَالِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah05.mp3', event)">اللَّهُمَّ
+                        اسْتُرْ عَوْرَاتِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah06.mp3', event)">وَآمِنْ
+                        رَوْعَاتِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah07.mp3', event)">اللَّهُمَّ
+                        احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah08.mp3', event)">وَمِنْ
+                        فَوْقِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah09.mp3', event)">وَأَعُوذُ
+                        بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِيَ</a>
+
+                </p>
+                <p id="reference">أبو داود وابن ماجه وانظر صحيح ابن ماجه ۲/۳۳۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! بیشک میں آپ سے دنیا و آخرت میں معافی اور عافیت کی
+                    درخواست کرتا ہوں۔ اے اللہ! بیشک میں آپ سے معافی اور عافیت کی درخواست کرتا ہوں اپنے دین اور دنیا اور
+                    اپنے اہل و مال میں۔ اے اللہ! میری پردے والی باتوں پر پردہ ڈال اور میرے خوف و ہراس کو (امن میں) بدل
+                    دے۔ اے اللہ! تو میری حفاظت فرما میرے سامنے سے، میرے پیچھے سے، میری دائیں طرف سے اور میری بائیں طرف
+                    سے اور میرے اوپر سے ۔ اور میں تیری عظمت کی پناہ چاہتا ہوں اِس بات سے کہ اچانک اپنے نیچے سے ہلاک کیا
+                    جاؤں۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/Bismillahillazi/Bismillahillazi01.mp3', event)">بِسْمِ
+                        اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الَْأرْضِ وَلَا فِي السَّمَاءِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/Bismillahillazi/Bismillahillazi02.mp3', event)">وَهُوَ
+                        السَّمِيعُ الْعَلِيمُ</a>
+
+                </p>
+                <p id="reference">أخرجه أبو داود ۴/ ۳۲۳ والترمذي ۵/ ۴٦۵ وابن ماجه وأحمد . انظر : صحيح ابن ماجه ۲/۳۳۲
+                    وحسن إسناده العلامة ابن باز في تحفة الأخيار ص۳۹</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اس اللہ کے نام کے ساتھ جس کے نام کے ہوتے ہوئے کوئی چیز
+                    نقصان نہیں پہنچا سکتی، زمین کی ہو یا آسمانوں کی۔ وہ خوب سننے والا، خوب جاننے والا ہے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/RadiTuBillah/RadiTuBillah01.mp3', event)">رَضِيتُ
+                        باللَّهِ رَبًّا، وَبِالْإِسْلَامِ دِيناً</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/RadiTuBillah/RadiTuBillah02.mp3', event)">وَبِمُحَمَّدٍ
+                        صَلَى اللَّهُ عَلِيهِ وَسَلَّمَ نَبِيَّاً</a>
+
+                </p>
+                <p id="reference">أحمد ۴/ ۳۳۷ والنسائي في عمل اليوم والليلة برقم ۴ وابن السني برقم ٦۸ وأبو داود 4/۴۱۸
+                    والترمذي ۵/۴٦۵ وحسنه ابن باز في تحفة الأخيار ص ۳۹</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">میں راضی ہوا اللہ کے رب ہونے پر، اسلام کے دین ہونے پر اور
+                    محمد ﷺ کے نبی ہونے پر</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/YaHayyuYaQayyum/YaHayyuYaQayyum01.mp3', event)">يَاحَيُّ،
+                        يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/YaHayyuYaQayyum/YaHayyuYaQayyum02.mp3', event)">أَصْلِحْ
+                        لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ</a>
+
+                </p>
+                <p id="reference">الحاكم وصححه ووافقه الذهبي ۱/ ۵۴۵ وانظر صحيح الترغيب والترهيب ۱/۲۷۳</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے زندۂ جاوید! اے قائم و دائم میں تیری ہی رحمت کے ذریعے
+                    فریاد کرتا ہوں تو میرا ہر کام سنوار دے، اور مجھے آنکھ جھپکنے کے برابر بھی میرے اپنے سپرد نہ کر۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillahRabbilAalameen/AsbahnaWaAsbahalMulkuLillahRabbilAalameen01.mp3', event)">أَصْبَحْنَا
+                        وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillahRabbilAalameen/AsbahnaWaAsbahalMulkuLillahRabbilAalameen02.mp3', event)">اللَّهُمَّ
+                        إِنِّـي أَسْأَلُكَ خَـيْرَ هَذَا الْـيَوْمِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillahRabbilAalameen/AsbahnaWaAsbahalMulkuLillahRabbilAalameen03.mp3', event)">فَتْحَهُ،
+                        وَنَصْرَهُ، وَنُورَهُ وَبَرَكَتَهُ، وَهُدَاهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaWaAsbahalMulkuLillahRabbilAalameen/AsbahnaWaAsbahalMulkuLillahRabbilAalameen04.mp3', event)">وَأَعُوذُ
+                        بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۲ وحسن إسناده شعيب وعبد القادر الأرناؤوط في تحقيق زاد المعاد ۲/ ۲۷۳</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">ہم نے اور اللہ ربِ کائنات کے ملک نے صبح کی۔ اے اللہ! میں
+                    آپ سے مانگتا ہوں اس دن کی بہتری، اس کی فتح و نصرت، اس کا نور اور اس کی برکت اور ہدایت۔ اور میں آپ کی
+                    پناہ چاہتا ہوں اس دن کے شر سے اور اس کے بعد والے دنوں کے شر سے۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaAlaFitratilIslam/AsbahnaAlaFitratilIslam01.mp3', event)">أَصْبَحْنَا
+                        عَلَى فِطْرَةِ الْإِسْلَامِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaAlaFitratilIslam/AsbahnaAlaFitratilIslam02.mp3', event)">وَعَلَى
+                        كَلِمَةِ الإِخْلَاصِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaAlaFitratilIslam/AsbahnaAlaFitratilIslam03.mp3', event)">وَعَلَى
+                        دِينِ نَبِـيِّنَا مُحَمَّدٍ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaAlaFitratilIslam/AsbahnaAlaFitratilIslam04.mp3', event)">وَعَاـَى
+                        مِلَّـةِ أَبِينَا إِبْـرَاهِيـمَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlySubahKeAzkar/AsbahnaAlaFitratilIslam/AsbahnaAlaFitratilIslam05.mp3', event)">حَنِيفاً
+                        مُسْلِماً وَمَا كَانَ مِنَ الْمُشْرِكِينَ</a>
+
+                </p>
+                <p id="reference">أحمد ۳/ ۴۰٦و ۴۰۷ وابن السني في عمل اليوم والليلة برقم 34 وانظر : صحيح الجامع ۴/ ۲۰۹
+                </p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">ہم نے صبح کی فطرتِ اسلام پر، کلمۂ اخلاص پر، اپنے نبی حضرت
+                    محمد ﷺ کے دین پر اور اپنے باپ حضرت ابرہیم علیہ السلام کی ملت پر جو یک رخ (اور) فرمانبردار تھے اور وہ
+                    ہرگز مشرکوں میں سے نہیں تھے۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دن میں سو (100) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdih/SubhanAllahiWaBiHamdih.mp3', event)">سُبْحَانَ
+                        اللَّهِ وَبِحَمْدِهِ</a>
+
+                </p>
+                <p id="reference">رواه مسلم۴ / ۲۰۷۱</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">میں اللہ کی تعریف کے ساتھ ساتھ اس کی پاکیزگی بیان کرتا ہوں
+                </p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دس (10) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/LaIlahaIllalahu/LaIlahaIllalahu01.mp3', event)">لَا
+                        إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/LaIlahaIllalahu/LaIlahaIllalahu02.mp3', event)">لَهُ
+                        الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</a>
+
+                </p>
+                <p id="reference">النسائي في عمل اليوم والليلة برقم ۲۴ وانظر :صحيح الترغيب والترهيب 1/۲۷۲ ،وتحفة الأخيار
+                    لابن باز ص۴۴وانظر فضلها في ص۱۴٦ ،حديث رقم ۲۵۵ أبو داود ۴/۳۱۹ وابن ماجه وأحمد ۴/٦۰ وانظر :صحيح
+                    الترغيب والترهيب ۱/۲۷۰ ،صحيح أبو داود ۳/۹۵۷ ، وصحيح ابن ماجه ۲/۳۳۱ وزاد المعاد ۲/ ۳۷۷</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اللہ تعالیٰ کے علاوہ کوئی (سچا) معبود نہیں، وہ اکیلا ہے،
+                    اس کا کوئی شریک نہیں اسی کی بادشاہت اور اسی کی تعریف ہے۔ اور وہ ہر چیز پر کامل قدرت رکھتا ہے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دن میں سو (100) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/LaIlahaIllalahu/LaIlahaIllalahu01.mp3', event)">لَا
+                        إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/LaIlahaIllalahu/LaIlahaIllalahu02.mp3', event)">لَهُ
+                        الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</a>
+
+                </p>
+                <p id="reference">البخاري ۴/۹۵،ومسلم ۴/۲۰۷۱</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اللہ تعالیٰ کے علاوہ کوئی (سچا) معبود نہیں، وہ اکیلا ہے،
+                    اس کا کوئی شریک نہیں اسی کی بادشاہت اور اسی کی تعریف ہے۔اور وہ ہر چیز پر کامل قدرت رکھتا ہے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih01.mp3', event)">سُبْحَانَ
+                        اللَّهِ وَبِحَمْدِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih02.mp3', event)">عَدَدَ
+                        خَلْقِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih03.mp3', event)">وَرِضَا
+                        نَفْسِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih04.mp3', event)">وَزِنَةَ
+                        عَرْشِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih05.mp3', event)">وَمِدَادَ
+                        كَلِمَاتِهِ</a>
+
+                </p>
+                <p id="reference">مسلم ۴/۲۰۹۰</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اللہ تعالیٰ اپنی تعریف سمیت پاک ہے اپنی مخلوق کی تعداد کے
+                    برابر، اپنی ذات کی رضا کے برابر، اپنے عرش کے وزن اور اپنے کلمات کی روشنائی کے برابر</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokaIlmanNafiAa/AllahumaInniAsalokaIlmanNafiAa01.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokaIlmanNafiAa/AllahumaInniAsalokaIlmanNafiAa02.mp3', event)">وَرِزْقاً
+                        طَيِّباً</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokaIlmanNafiAa/AllahumaInniAsalokaIlmanNafiAa03.mp3', event)">وَعَمَلاً
+                        مُتَقَبَّلاً</a>
+
+                </p>
+                <p id="reference">أخرجه ابن السني في عمل اليوم والليلة برقم ۵۴وابن ماجه برقم ۹۲۵وحسن إسناده عبد القادر
+                    وشعيب الأرناؤوط في تحقيق زاد المعاد ۲/۳۷۵</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! بے شک میں آپ سے مانگتا ہوں نفع دینے والا علم،
+                    پاکیزہ رزق اور قبولیت والا عمل</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دن میں سو (100) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AstagfirullahiWaAtubIlaih/AstagfirullahiWaAtubIlaih.mp3', event)">أَسْتَغْفِرُ
+                        اللَّهَ وَأَتُوبُ إِلَيْهِ</a>
+
+                </p>
+                <p id="reference">البخاري مع الفتح ۱۱/ ۱۰۱ ، ومسلم ۴/ ۲۰۷۵</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">میں اللہ سے بخشش مانگتا ہوں اور اس کے حضور توبہ کرتا ہوں
+                </p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AuzubiKalimatillah/AuzubiKalimatillah.mp3', event)">أَعُوذُ
+                        بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</a>
+
+                </p>
+                <p id="reference">أخرجه أحمد ۲/۲۹۰ والنسائي في عمل اليوم والليلة برقم ۵۹۰ وابن السني برقم ٦۸وانظر : صحيح
+                    الترمذي ۳/۱۸۷، وصحيح ابن ماجه ۲/۲٦٦ وتحفة الأخيار ص۴۵</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">میں اللہ کے مکمل کلمات کی پناہ میں آتا ہوں اس کی مخلوق کے
+                    شر سے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دس (10) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaSalliWaSallimAlaNabiyyinaMuhammad/AllahumaSalliWaSallimAlaNabiyyinaMuhammad.mp3', event)">اللَّهُمَّ
+                        صَلِّ وَسَلَّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ</a>
+
+                </p>
+                <p id="reference">رواه الطبراني بإسنادين أحدهما جيد ، انظر الزائد 10/ ۱۲۰ وصحيح الترغيب والترهيب ۱/۲۷۳
+                </p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! ہمارے نبی حضرت محمد ﷺ پر درود و سلام بھیج</p>
+            </div>
+
+        </section>
+
+        <!--* here will appear shaam ke azkar -->
+        <section class="shaamKeAzkar">
+            <h2>شام کے اذکار</h2>
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/error.mp3', event)">الحمد لله وحده</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/error.mp3', event)">والصلاة والسلام على من
+                        لا نبي بعده</a>
+
+                </p>
+                <p id="reference">أبو داود برقم ۳٦٦۷، وحسنه الألباني ، صحيح أبو داود ۲/ ٦۹۸</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">تمام تعریفیں اللہ کے لئے ہیں جو یکتا ہے، اور درودوسلام اس
+                    پر جس کے بعد کوئی نبی نہیں</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi01.mp3', event)">أَعُوذُ
+                        بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi02.mp3', event)">اللَّهُ لاَ
+                        إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi03.mp3', event)">لاَ
+                        تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi04.mp3', event)">
+                        لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ
+                        بِإِذْنِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi05.mp3', event)">يَعْلَمُ مَا
+                        بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi06.mp3', event)">وَلاَ
+                        يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi07.mp3', event)">وَسِعَ
+                        كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi08.mp3', event)">وَهُوَ
+                        الْعَلِيُّ الْعَظِيمُ</a>
+
+                </p>
+                <p id="reference">سورة البقرة ، آية ۲۵۵ من قالها حين يمسي أجير منهم حتى يصبح أخرجه الحاكم ۱/ ۵٦۲وصححه
+                    الألباني في صحيح الترغيب والترهيب ۱/ ۲۷۳ وعزاه إلى النسائي والطبراني وقال : وإسناد الطبراني جيد</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">للہ وہ ذات ہے جس کے سوا کوئی سچا معبود نہیں وہ زندہ جاوید
+                    ہمیشہ قائم رہنے والا ہے۔ اسے اونگھ آتی ہے نہ نیند۔اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین
+                    میں ہے۔ کون ہے وہ جو اسکے ہاں اسکی اجازت کے بغیر (کسی کی) سفارش کرسکے؟ وہ ان چیزوں کو جانتا ہے جو ان
+                    کے سامنے ہیں اور جو انکے پیچھے ہیں۔ اور وہ (لوگ) اس کے علم میں سے کسی چیز پر دسترس نہیں رکھتے تاہم
+                    جس قدر وہ خود چاہے۔ اس کی کرسی حاوی ہے۔ آسمانوں اور زمین پر اور نہیں گراں گزرتی اسے حفاظت ان دونوں
+                    کی اور وہ بلند مرتبہ ہے عظمت والا ہے۔ </p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas02.mp3', event)">قُلْ
+                        هُوَ اللّٰہُ اَحَدٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas03.mp3', event)">اَللّٰہُ
+                        الصَّمَدُ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas04.mp3', event)">لَمْ
+                        یَلِدْ وَلَمْ یُوْلَدْ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas05.mp3', event)">وَلَمْ
+                        یَکُنْ لَّـهُ کُفُوًا اَحَدٌ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۲ والترمذي ۵/ ۵٦۷ وانظر صحيح الترمذي ۳/ ۱۸۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ وہ اللہ ایک ہے۔ اللہ بے نیاز ہے۔ نہ اسکی کوئی اولاد ہے اور نہ وہ کسی کی
+                    اولاد، اور نہ ہی کوئی اس کا ساتھی ہے۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq02.mp3', event)">قُلْ
+                        اَعُوْذُ بِرَبِّ الْفَلَقِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq03.mp3', event)">مِنْ
+                        شَرِّ مَا خَلَقَ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq04.mp3', event)">وَمِنْ
+                        شَرِّ غَاسِقٍ اِذَا وَقَبَ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq05.mp3', event)">وَمِنْ
+                        شَرِّ النَّفّٰثٰتِ فِی الْعُقَدِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq06.mp3', event)">وَمِنْ
+                        شَرِّ حَاسِدٍ اِذَا حَسَدَ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۲ والترمذي ۵/ ۵٦۷ وانظر صحيح الترمذي ۳/ ۱۸۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ میں پناہ چاہتا ہوں صبح کے رب کی، اس چیز کے شر سے جو اس نے پیدا کی اور
+                    اندھیرا کرنے والے کے شر سے جب وہ چھپ جائے۔ اور گرہوں میں پھونکنے والیوں کے شر سے اور حسد کرنے والے
+                    کے شر سے جب وہ حسد کرے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas02.mp3', event)">قُلْ
+                        اَعُوْذُ بِرَبِّ النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas03.mp3', event)">مَلِکِ
+                        النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas04.mp3', event)">❸اِلٰـهِ
+                        النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas05.mp3', event)">مِنْ شَرِّ
+                        الْوَسْوَاسِ الْخَنَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas06.mp3', event)">الَّذِیْ
+                        یُوَسْوِسُ فِیْ صُدُوْرِ النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas07.mp3', event)">مِنَ
+                        الْجِنَّةِ وَالنَّاسِ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۲ والترمذي ۵/ ۵٦۷ وانظر صحيح الترمذي ۳/ ۱۸۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ میں پناہ میں آتا ہوں لوگوں کے رب کی، لوگوں کے بادشاہ کی، لوگوں کے معبود کی،
+                    وسوسہ ڈالنے والے شیطان سے جو آنکھوں سے اوجھل ہے۔ جو وسوسہ ڈالتا ہے لوگوں کے سینوں میں ۔جنوں میں سے
+                    اور انسانوں میں سے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillah/AmsainaWaAmsalMulkLillah01.mp3', event)">اَمْسَيْنَا
+                        وَاَمْسَی الْمُلْكُ لِلَّهِ وَالْحَمْدُلِلَّهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillah/AmsainaWaAmsalMulkLillah02.mp3', event)">لَا
+                        إِلَهَ إِلَّّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillah/AmsainaWaAmsalMulkLillah03.mp3', event)">لَهُ
+                        الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillah/AmsainaWaAmsalMulkLillah04.mp3', event)">رَبِّ
+                        أَسْأَلُكَ خَيْرَ مَا فِيْ هَذِهِ اللَّيْلَةِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillah/AmsainaWaAmsalMulkLillah05.mp3', event)">وَخَيْرَ
+                        مَا بَعْدَهَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillah/AmsainaWaAmsalMulkLillah06.mp3', event)">وَأَعُوْذُ
+                        بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillah/AmsainaWaAmsalMulkLillah07.mp3', event)">رَبِّ
+                        أَعُوْذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillah/AmsainaWaAmsalMulkLillah08.mp3', event)">رَبِّ
+                        أَعُوْذُ بِكَ مِنْ عَذَابٍ فِيْ النَّارِ وَعَذَابٍ فِيْ الْقَبْرِ</a>
+
+                </p>
+                <p id="reference">مسلم ۴/ ۲۰۸۸</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">ہم نے اور اللہ کے ملک نے شام کی اور ہر قسم کی تعریف اللہ
+                    ہی کے لئے ہے۔ اللہ کے علاوہ کوئی سچا معبود نہیں۔ وہ اکیلا ہے اس کا کوئی شریک نہیں۔ اسی کی ہی بادشاہت
+                    ہے اور اسی کی ہی تعریف ہے اور وہ ہر چیز پر کامل قدرت رکھتا ہے۔ اے میرے رب! میں تجھ سے اس رات کی
+                    بہتری اور اس کے بعد آنے والی راتوں کی بہتری کا سوال کرتا ہوں اور میں تیری پناہ میں آتا ہوں اس رات کے
+                    شر سے اور اس کے بعد آنے والی راتوں کے شر سے، اے میرے رب میں کاہلی اور بڑھاپے کی خرابی سے تیری پناہ
+                    میں آتا ہوں۔ اے میرے رب! میں تیری پناہ میں آتا ہوں آگ کے عذاب سے اور قبر کے عذاب سے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaBikaAmsaina/AllahumaBikaAmsaina01.mp3', event)">اللَّهُمَّ
+                        بِكَ أَمْسَـينا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaBikaAmsaina/AllahumaBikaAmsaina02.mp3', event)">وَبِكَ
+                        أَصْبَحْنَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaBikaAmsaina/AllahumaBikaAmsaina03.mp3', event)">وَبِكَ
+                        نَحْيَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaBikaAmsaina/AllahumaBikaAmsaina04.mp3', event)">وَبِكَ
+                        نَمُوتُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaBikaAmsaina/AllahumaBikaAmsaina05.mp3', event)">وَإِلَيْكَ
+                        الْمَصِيْرُ</a>
+
+                </p>
+                <p id="reference">الترمذي ۵/ ۴٦٦ وانظر صحيح الترمذي ۳/ ۱۴۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ تیری ہی توفیق سے ہم نے شام کی اور تیری ہی توفیق سے
+                    صبح اور تیرے ہی نام پر ہم زندہ ہیں اور تیرے ہی نام پر ہم مریں گے اور تیری طرف ہی لوٹ کر جانا ہے۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi01.mp3', event)">اللَّهُمَّ
+                        أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi02.mp3', event)">خَلَقْتَنِي
+                        وَأَنَا عَبْدُكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi03.mp3', event)">وَأَنَا
+                        عَلَى عَهْدِكَ وَوَعْدِكَ مَااسْتَطَعْتُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi04.mp3', event)">أَعُوذُ
+                        بِكَ مِنْ شَرِّ مَا صَنَعْتُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi05.mp3', event)">أَبُوءُ
+                        لَكَ بِنِعْمَتِكَ عَلَيَّ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi06.mp3', event)">وَأَبُوءُ
+                        بِذَنْبِي فَاغْفِرلِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAntaRabbi/AllahumaAntaRabbi07.mp3', event)">فَإِنَّهُ
+                        لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</a>
+
+                </p>
+                <p id="reference">أخرجه البخاري ۷/۱۵۰</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! تو میرارب ہے، تیرے علاوہ کوئی (سچا) معبود نہیں تو
+                    نے مجھے پیدا فرمایا اور میں تیرا بندہ ہوں۔ اور میں اپنی طاقت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔
+                    اپنے کئے کے شر سے تیری پناہ میں آتا ہوں۔ میں اپنے اوپر تیرے انعام کا اقرار کرتا ہوں اور میں اپنے
+                    گناہ کا اقرار کرتا ہوں لہٰذا تو مجھے معاف کردے۔ سچی بات یہ ہے کہ تیرے سوا کوئی بھی گناہ معاف نہیں کر
+                    سکتا</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">چار (4) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaInniAmsaituUshHiduqa/AllahumaInniAmsaituUshHiduqa01.mp3', event)">اللَّهُمَّ
+                        إِنِّي اَمْسَيْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaInniAmsaituUshHiduqa/AllahumaInniAmsaituUshHiduqa02.mp3', event)">وَمَلَائِكَتَكَ
+                        وَجَمِيعَ خَلْقِكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaInniAmsaituUshHiduqa/AllahumaInniAmsaituUshHiduqa03.mp3', event)">أَنَّكَ
+                        أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaInniAmsaituUshHiduqa/AllahumaInniAmsaituUshHiduqa04.mp3', event)">وَحْدَكَ
+                        لَا شَرِيكَ لَكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaInniAmsaituUshHiduqa/AllahumaInniAmsaituUshHiduqa05.mp3', event)">وَأَنَّ
+                        مُحَمَّداً عَبْدُكَ وَرَسُولُكَ</a>
+
+                </p>
+                <p id="reference">أخرجه أبو داود ۴/ ۳۱۷ والبخاري في الأدب المفرد برقم ۱۲۰۱ والنسائي في عمل اليوم والليلة
+                    برقم ۹، وابن السني برقم ۷۰ وحسن سماحة الشيخ ابن باز إسناد النسائي وأبي داود في تحفة الأخيار ص ۲۳</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! یقیناََ میں نے ایسی حالت میں شام کی کہ تجھے گواہ
+                    بناتا ہوں اور تیرا عرش اٹھانے والوں اور تیرے فرشتوں اور تیری تمام مخلوق کو اس اقرار پر گواہ بناتا
+                    ہوں کہ تو ہی اللہ ہے، تیرے سوا کوئی (سچا) معبود نہیں۔ تو اکیلا ہے، تیرا کوئی شریک نہیں۔ اور بلاشبہ
+                    حضرت محمدﷺ تیرے بندے اور تیرے رسول ہیں</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaMaAmsaBiMinNima/AllahumaMaAmsaBiMinNima01.mp3', event)">اللَّهُمَّ
+                        مَا أَمْسَى بِي مِنْ نِعْمَةٍ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaMaAmsaBiMinNima/AllahumaMaAmsaBiMinNima02.mp3', event)">أَوْ
+                        بِأَحَدٍ مِنْ خَلْقِكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaMaAmsaBiMinNima/AllahumaMaAmsaBiMinNima03.mp3', event)">فَمِنْكَ
+                        وَحْدَكَ لَا شَرِيكَ لَكَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AllahumaMaAmsaBiMinNima/AllahumaMaAmsaBiMinNima04.mp3', event)">
+                        فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ</a>
+
+                </p>
+                <p id="reference">أخرجه أبو داود ۴/۳۱۸ ، والنسائي في عمل اليوم والليلة برقم ۷وابن السني برقم ۴۱ وابن
+                    حبان (( موارد)) رقم ۲۳٦۱وحسن ابن باز إسناده في تحفة الأخيار ص۲۴</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! شام کے وقت مجھ پر یا تیری مخلوق میں سے کسی پر جو
+                    بھی انعام ہوا ہے تو وہ تیری ہی طرف سے ہے۔ تو اکیلا ہے، تیرا کوئی شریک نہیں۔ لہٰذا تیرے لئے ہی حمد ہے
+                    اور تیرے لئے ہی شکر</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani01.mp3', event)">اللَّهُمَّ
+                        عَافِـني فِي بَدَنِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani02.mp3', event)">اللَّهُمَّ
+                        عَافِـنِي فِي سَمْعِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani03.mp3', event)">اللَّهُمَّ
+                        عَافِنِي فِي بَصَرِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani04.mp3', event)">لَا
+                        إِلَهَ إلاَّ أَنْتَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani05.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَعُوذُبِكَ مِنَ الْكُفْر وَالفَقْرِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani06.mp3', event)">وَأَعُوذُبِكَ
+                        مِنْ عَذَابِ الْقَبْرِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaAafiniFiBadani/AllahumaAafiniFiBadani07.mp3', event)">لَا
+                        إلَهَ إلاَّ أَنْتَ</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۴، وأحمد ۵/ ۴۲ والنسائي في عمل اليوم والليلة برقم ۲۲وابن السني برقم
+                    ٦۹والبخاري في الأدب المفرد وحسن العلامة ابن باز في تحفة الأخيار ص۲٦</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! مجھے عافیت دیجئے میرے بدن میں۔ اے اللہ! مجھے
+                    عافیت دیجئے میرے کانوں میں۔ اے اللہ! مجھے عافیت دیجئے میری آنکھوں میں۔ آپ کے سوا کوئی (سچا) معبود
+                    نہیں۔ اے اللہ بیشک میں آپکی پناہ میں آتا ہوں کفر اور غربت سے۔ اے اللہ بیشک میں آپکی پناہ میں آتا ہوں
+                    عذابِ قبر سے۔ آپکے سوا کوئی (سچا) معبود نہیں۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">سات (7) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/HasbiYallahu/HasbiYallahu.mp3', event)">حَسْبِيَ
+                        اللَّهُ لَآ إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</a>
+
+                </p>
+                <p id="reference">أخرجه ابن السني برقم ۷۱ مرفوعاً وأبو موقوف ۴/۳۲۱،وصحح إسناده شعيب وعبد القادر
+                    الأرناؤوط . انظر زاد المعاد ۲/ ۳۷٦</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">مجھے اللہ ہی کافی ہے۔ اس کے علاوہ کوئی (سچا) معبود نہیں۔
+                    اسی پر میں نے توکل کیا اور وہ عرشِ عظیم کا رب ہے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah01.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah02.mp3', event)">فِي
+                        الدُّنْيَا وَالْآخِرَةِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah03.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah04.mp3', event)">فِي
+                        دِينِي، وَدُنْيَايَ وَأَهْلِي، وَمَالِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah05.mp3', event)">اللَّهُمَّ
+                        اسْتُرْ عَوْرَاتِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah06.mp3', event)">وَآمِنْ
+                        رَوْعَاتِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah07.mp3', event)">اللَّهُمَّ
+                        احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah08.mp3', event)">وَمِنْ
+                        فَوْقِي</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokalAfwaWalAfiyah/AllahumaInniAsalokalAfwaWalAfiyah09.mp3', event)">وَأَعُوذُ
+                        بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِيَ</a>
+
+                </p>
+                <p id="reference">أبو داود وابن ماجه وانظر صحيح ابن ماجه ۲/۳۳۲</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! بیشک میں آپ سے دنیا و آخرت میں معافی اور عافیت کی
+                    درخواست کرتا ہوں۔ اے اللہ! بیشک میں آپ سے معافی اور عافیت کی درخواست کرتا ہوں اپنے دین اور دنیا اور
+                    اپنے اہل و مال میں۔ اے اللہ! میری پردے والی باتوں پر پردہ ڈال اور میرے خوف و ہراس کو (امن میں) بدل
+                    دے۔ اے اللہ! تو میری حفاظت فرما میرے سامنے سے، میرے پیچھے سے، میری دائیں طرف سے اور میری بائیں طرف
+                    سے اور میرے اوپر سے ۔ اور میں تیری عظمت کی پناہ چاہتا ہوں اِس بات سے کہ اچانک اپنے نیچے سے ہلاک کیا
+                    جاؤں۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/Bismillahillazi/Bismillahillazi01.mp3', event)">بِسْمِ
+                        اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الَْأرْضِ وَلَا فِي السَّمَاءِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/Bismillahillazi/Bismillahillazi02.mp3', event)">وَهُوَ
+                        السَّمِيعُ الْعَلِيمُ</a>
+
+                </p>
+                <p id="reference">أخرجه أبو داود ۴/ ۳۲۳ والترمذي ۵/ ۴٦۵ وابن ماجه وأحمد . انظر : صحيح ابن ماجه ۲/۳۳۲
+                    وحسن إسناده العلامة ابن باز في تحفة الأخيار ص۳۹</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اس اللہ کے نام کے ساتھ جس کے نام کے ہوتے ہوئے کوئی چیز
+                    نقصان نہیں پہنچا سکتی، زمین کی ہو یا آسمانوں کی۔ وہ خوب سننے والا، خوب جاننے والا ہے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/RadiTuBillah/RadiTuBillah01.mp3', event)">رَضِيتُ
+                        باللَّهِ رَبًّا، وَبِالْإِسْلَامِ دِيناً</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/RadiTuBillah/RadiTuBillah02.mp3', event)">وَبِمُحَمَّدٍ
+                        صَلَى اللَّهُ عَلِيهِ وَسَلَّمَ نَبِيَّاً</a>
+
+                </p>
+                <p id="reference">أحمد ۴/ ۳۳۷ والنسائي في عمل اليوم والليلة برقم ۴ وابن السني برقم ٦۸ وأبو داود 4/۴۱۸
+                    والترمذي ۵/۴٦۵ وحسنه ابن باز في تحفة الأخيار ص ۳۹</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">میں راضی ہوا اللہ کے رب ہونے پر، اسلام کے دین ہونے پر اور
+                    محمد ﷺ کے نبی ہونے پر</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/YaHayyuYaQayyum/YaHayyuYaQayyum01.mp3', event)">يَاحَيُّ،
+                        يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/YaHayyuYaQayyum/YaHayyuYaQayyum02.mp3', event)">أَصْلِحْ
+                        لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ</a>
+
+                </p>
+                <p id="reference">الحاكم وصححه ووافقه الذهبي ۱/ ۵۴۵ وانظر صحيح الترغيب والترهيب ۱/۲۷۳</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے زندۂ جاوید! اے قائم و دائم میں تیری ہی رحمت کے ذریعے
+                    فریاد کرتا ہوں تو میرا ہر کام سنوار دے، اور مجھے آنکھ جھپکنے کے برابر بھی میرے اپنے سپرد نہ کر۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillahiRabbilAalameen/AmsainaWaAmsalMulkLillahiRabbilAalameen01.mp3', event)">أَمْسَيْنا
+                        وَأَمْسَى الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillahiRabbilAalameen/AmsainaWaAmsalMulkLillahiRabbilAalameen02.mp3', event)">اللَّهُمَّ
+                        إِنِّـي أَسْأَلُكَ خَـيْرَ هَذِهِ اللَّيْلَةِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillahiRabbilAalameen/AmsainaWaAmsalMulkLillahiRabbilAalameen03.mp3', event)">فَتْحَهُ،
+                        وَنَصْرَهُ، وَنُورَهُ وَبَرَكَتَهُ، وَهُدَاهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaWaAmsalMulkLillahiRabbilAalameen/AmsainaWaAmsalMulkLillahiRabbilAalameen04.mp3', event)">وَأَعُوذُ
+                        بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهَا</a>
+
+                </p>
+                <p id="reference">أبو داود ۴/ ۳۲۲ وحسن إسناده شعيب وعبد القادر الأرناؤوط في تحقيق زاد المعاد ۲/ ۲۷۳</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">ہم نے اور اللہ ربِ کائنات کے ملک نے شام کی۔ اے اللہ! میں
+                    آپ سے مانگتا ہوں اس دن کی بہتری، اس کی فتح و نصرت، اس کا نور اور اس کی برکت اور ہدایت۔ اور میں آپ کی
+                    پناہ چاہتا ہوں اس رات کے شر سے اور اس کے بعد والی راتوں کے شر سے۔
+                </p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaAlaFitratilIslam/AmsainaAlaFitratilIslam01.mp3', event)">أَمْسَيْنَا
+                        عَلَى فِطْرَةِ الْإِسْلَامِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaAlaFitratilIslam/AmsainaAlaFitratilIslam02.mp3', event)">
+                        وَعَلَى كَلِمَةِ الإِخْلَاصِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaAlaFitratilIslam/AmsainaAlaFitratilIslam03.mp3', event)">وَعَلَى
+                        دِينِ نَبِـيِّنَا مُحَمَّدٍ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaAlaFitratilIslam/AmsainaAlaFitratilIslam04.mp3', event)">وَعَاـَى
+                        مِلَّـةِ أَبِينَا إِبْـرَاهِيـمَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/onlyShaamKeAzkar/AmsainaAlaFitratilIslam/AmsainaAlaFitratilIslam05.mp3', event)">حَنِيفاً
+                        مُسْلِماً وَمَا كَانَ مِنَ الْمُشْرِكِينَ</a>
+
+                </p>
+                <p id="reference">أحمد ۳/ ۴۰٦و ۴۰۷ وابن السني في عمل اليوم والليلة برقم 34 وانظر : صحيح الجامع ۴/ ۲۰۹
+                </p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">ہم نے شام کی فطرتِ اسلام پر، کلمۂ اخلاص پر، اپنے نبی حضرت
+                    محمد ﷺ کے دین پر اور اپنے باپ حضرت ابرہیم علیہ السلام کی ملت پر جو یک رخ (اور) فرمانبردار تھے اور وہ
+                    ہرگز مشرکوں میں سے نہیں تھے۔</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دن میں سو (100) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdih/SubhanAllahiWaBiHamdih.mp3', event)">سُبْحَانَ
+                        اللَّهِ وَبِحَمْدِهِ</a>
+
+                </p>
+                <p id="reference">رواه مسلم۴ / ۲۰۷۱</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">میں اللہ کی تعریف کے ساتھ ساتھ اس کی پاکیزگی بیان کرتا ہوں
+                </p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دس (10) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/LaIlahaIllalahu/LaIlahaIllalahu01.mp3', event)">لَا
+                        إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/LaIlahaIllalahu/LaIlahaIllalahu02.mp3', event)">لَهُ
+                        الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</a>
+
+                </p>
+                <p id="reference">النسائي في عمل اليوم والليلة برقم ۲۴ وانظر :صحيح الترغيب والترهيب 1/۲۷۲ ،وتحفة الأخيار
+                    لابن باز ص۴۴وانظر فضلها في ص۱۴٦ ،حديث رقم ۲۵۵ أبو داود ۴/۳۱۹ وابن ماجه وأحمد ۴/٦۰ وانظر :صحيح
+                    الترغيب والترهيب ۱/۲۷۰ ،صحيح أبو داود ۳/۹۵۷ ، وصحيح ابن ماجه ۲/۳۳۱ وزاد المعاد ۲/ ۳۷۷</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اللہ تعالیٰ کے علاوہ کوئی (سچا) معبود نہیں، وہ اکیلا ہے،
+                    اس کا کوئی شریک نہیں اسی کی بادشاہت اور اسی کی تعریف ہے۔ اور وہ ہر چیز پر کامل قدرت رکھتا ہے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دن میں سو (100) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/LaIlahaIllalahu/LaIlahaIllalahu01.mp3', event)">لَا
+                        إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/LaIlahaIllalahu/LaIlahaIllalahu02.mp3', event)">لَهُ
+                        الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</a>
+
+                </p>
+                <p id="reference">البخاري ۴/۹۵،ومسلم ۴/۲۰۷۱</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اللہ تعالیٰ کے علاوہ کوئی (سچا) معبود نہیں، وہ اکیلا ہے،
+                    اس کا کوئی شریک نہیں اسی کی بادشاہت اور اسی کی تعریف ہے۔اور وہ ہر چیز پر کامل قدرت رکھتا ہے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih01.mp3', event)">سُبْحَانَ
+                        اللَّهِ وَبِحَمْدِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih02.mp3', event)">عَدَدَ
+                        خَلْقِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih03.mp3', event)">وَرِضَا
+                        نَفْسِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih04.mp3', event)">وَزِنَةَ
+                        عَرْشِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SubhanAllahiWaBiHamdihAdadKhalkih/SubhanAllahiWaBiHamdihAdadKhalkih05.mp3', event)">وَمِدَادَ
+                        كَلِمَاتِهِ</a>
+
+                </p>
+                <p id="reference">مسلم ۴/۲۰۹۰</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اللہ تعالیٰ اپنی تعریف سمیت پاک ہے اپنی مخلوق کی تعداد کے
+                    برابر، اپنی ذات کی رضا کے برابر، اپنے عرش کے وزن اور اپنے کلمات کی روشنائی کے برابر</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokaIlmanNafiAa/AllahumaInniAsalokaIlmanNafiAa01.mp3', event)">اللَّهُمَّ
+                        إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokaIlmanNafiAa/AllahumaInniAsalokaIlmanNafiAa02.mp3', event)">وَرِزْقاً
+                        طَيِّباً</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaInniAsalokaIlmanNafiAa/AllahumaInniAsalokaIlmanNafiAa03.mp3', event)">وَعَمَلاً
+                        مُتَقَبَّلاً</a>
+
+                </p>
+                <p id="reference">أخرجه ابن السني في عمل اليوم والليلة برقم ۵۴وابن ماجه برقم ۹۲۵وحسن إسناده عبد القادر
+                    وشعيب الأرناؤوط في تحقيق زاد المعاد ۲/۳۷۵</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! بے شک میں آپ سے مانگتا ہوں نفع دینے والا علم،
+                    پاکیزہ رزق اور قبولیت والا عمل</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دن میں سو (100) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AstagfirullahiWaAtubIlaih/AstagfirullahiWaAtubIlaih.mp3', event)">أَسْتَغْفِرُ
+                        اللَّهَ وَأَتُوبُ إِلَيْهِ</a>
+
+                </p>
+                <p id="reference">البخاري مع الفتح ۱۱/ ۱۰۱ ، ومسلم ۴/ ۲۰۷۵</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">میں اللہ سے بخشش مانگتا ہوں اور اس کے حضور توبہ کرتا ہوں
+                </p>
+            </div>
+
+            <div class="dua">
+                <p class="times">تین (3) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AuzubiKalimatillah/AuzubiKalimatillah.mp3', event)">أَعُوذُ
+                        بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</a>
+
+                </p>
+                <p id="reference">أخرجه أحمد ۲/۲۹۰ والنسائي في عمل اليوم والليلة برقم ۵۹۰ وابن السني برقم ٦۸وانظر : صحيح
+                    الترمذي ۳/۱۸۷، وصحيح ابن ماجه ۲/۲٦٦ وتحفة الأخيار ص۴۵</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">میں اللہ کے مکمل کلمات کی پناہ میں آتا ہوں اس کی مخلوق کے
+                    شر سے</p>
+            </div>
+
+            <div class="dua">
+                <p class="times">دس (10) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AllahumaSalliWaSallimAlaNabiyyinaMuhammad/AllahumaSalliWaSallimAlaNabiyyinaMuhammad.mp3', event)">اللَّهُمَّ
+                        صَلِّ وَسَلَّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ</a>
+
+                </p>
+                <p id="reference">رواه الطبراني بإسنادين أحدهما جيد ، انظر الزائد 10/ ۱۲۰ وصحيح الترغيب والترهيب ۱/۲۷۳
+                </p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! ہمارے نبی حضرت محمد ﷺ پر درود و سلام بھیج</p>
+            </div>
+
+        </section>
+
+        <!--* here will appear sone ke pehle ke azkar -->
+        <section class="soneSePehleKeAzkar">
+            <h2>سونے سے پہلے کے اذکار</h2>
+            <div class="dua">
+                <p class="times">دونوں ہتھیلیاں ساتھ ملا کر سورۂ اخلاص، سورۂ فلق اور سورۂ ناس پڑھے، پھر ان میں پھونک
+                    مارے اور دونوں کو اپنے جسم پر جہاں تک ممکن ہو پھیرے، سر، چہرے اور جسم کے سامنے والے حصے سے شروع کرے۔
+                    اس طرح تین دفعہ کرے۔
+                </p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas02.mp3', event)">قُلْ
+                        هُوَ
+                        اللّٰہُ اَحَدٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas03.mp3', event)">اَللّٰہُ
+                        الصَّمَدُ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas04.mp3', event)">لَمْ
+                        یَلِدْ
+                        وَلَمْ یُوْلَدْ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/SurahIkhlas/SurahIkhlas05.mp3', event)">وَلَمْ
+                        یَکُنْ لَّـهُ کُفُوًا اَحَدٌ</a>
+
+                </p>
+                <p id="reference">صحیح البخاری، فضائل القرآن، باب فضل المعوذات، حدیث: 5017</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ وہ اللہ ایک ہے۔ اللہ بے نیاز ہے۔ نہ اسکی کوئی اولاد ہے اور نہ وہ کسی کی
+                    اولاد، اور نہ ہی کوئی اس کا ساتھی ہے۔</p>
+            </div>
+            <div class="dua">
+                <p class="times">دونوں ہتھیلیاں ساتھ ملا کر سورۂ اخلاص، سورۂ فلق اور سورۂ ناس پڑھے، پھر ان میں پھونک
+                    مارے اور دونوں کو اپنے جسم پر جہاں تک ممکن ہو پھیرے، سر، چہرے اور جسم کے سامنے والے حصے سے شروع کرے۔
+                    اس طرح تین دفعہ کرے۔
+                </p>
+                <p class="arabic">
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq02.mp3', event)">قُلْ
+                        اَعُوْذُ بِرَبِّ الْفَلَقِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq03.mp3', event)">مِنْ
+                        شَرِّ مَا خَلَقَ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq04.mp3', event)">وَمِنْ
+                        شَرِّ
+                        غَاسِقٍ اِذَا وَقَبَ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq05.mp3', event)">وَمِنْ
+                        شَرِّ
+                        النَّفّٰثٰتِ فِی الْعُقَدِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahFalaq/SurahFalaq06.mp3', event)">وَمِنْ
+                        شَرِّ
+                        حَاسِدٍ اِذَا حَسَدَ</a>
+
+                </p>
+                <p id="reference">صحیح البخاری، فضائل القرآن، باب فضل المعوذات، حدیث: 5017</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ میں پناہ چاہتا ہوں صبح کے رب کی، اس چیز کے شر سے جو اس نے پیدا کی اور
+                    اندھیرا کرنے والے کے شر سے جب وہ چھپ جائے۔ اور گرہوں میں پھونکنے والیوں کے شر سے اور حسد کرنے والے
+                    کے شر سے جب وہ حسد کرے</p>
+            </div>
+            <div class="dua">
+                <p class="times">دونوں ہتھیلیاں ساتھ ملا کر سورۂ اخلاص، سورۂ فلق اور سورۂ ناس پڑھے، پھر ان میں پھونک
+                    مارے اور دونوں کو اپنے جسم پر جہاں تک ممکن ہو پھیرے، سر، چہرے اور جسم کے سامنے والے حصے سے شروع کرے۔
+                    اس طرح تین دفعہ کرے۔
+                </p>
+                <p class="arabic">
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas01.mp3', event)">بِسْمِ
+                        اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas02.mp3', event)">قُلْ
+                        اَعُوْذُ بِرَبِّ النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas03.mp3', event)">مَلِکِ
+                        النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas04.mp3', event)">اِلٰـهِ
+                        النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas05.mp3', event)">مِنْ
+                        شَرِّ الْوَسْوَاسِ الْخَنَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas06.mp3', event)">الَّذِیْ
+                        یُوَسْوِسُ فِیْ صُدُوْرِ النَّاسِ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/SurahNas/SurahNas07.mp3', event)">مِنَ
+                        الْجِنَّةِ وَالنَّاسِ</a>
+
+                </p>
+                <p id="reference">صحیح البخاری، فضائل القرآن، باب فضل المعوذات، حدیث: 5017</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">شروع کرتا ہوں اللہ کے نام سے جو بڑا مہربان نہایت رحم والا
+                    ہے۔ (آپﷺ) کہہ دیجئیے کہ میں پناہ میں آتا ہوں لوگوں کے رب کی، لوگوں کے بادشاہ کی، لوگوں کے معبود کی،
+                    وسوسہ ڈالنے والے شیطان سے جو آنکھوں سے اوجھل ہے۔ جو وسوسہ ڈالتا ہے لوگوں کے سینوں میں ۔جنوں میں سے
+                    اور انسانوں میں سے</p>
+            </div>
+            <div class="dua">
+                <p class="times">جب تم بستر پر پہنچو اور آیۃ الکرسی: (اَللّٰہُ لَآ اِلٰہَ اِلَّا ھُوَ اَلْحَیُّ
+                    الْقَیُّوْمُ) مکمل پڑھو تو اللہ کی طرف سے ایک محافظ مقرر ہوجائے گا اور شیطان صبح تک تمہارے قریب بھی
+                    نہ آسکے گا۔</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi01.mp3', event)">أَعُوذُ
+                        بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi02.mp3', event)">اللَّهُ لاَ
+                        إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi03.mp3', event)">لاَ
+                        تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ</a>
+                    <a href="#" onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi04.mp3', event)">
+                        لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ
+                        بِإِذْنِهِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi05.mp3', event)">يَعْلَمُ مَا
+                        بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi06.mp3', event)">وَلاَ
+                        يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi07.mp3', event)">وَسِعَ
+                        كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/subahShaamKeAzkar/AyatAlKursi/AyatAlKursi08.mp3', event)">وَهُوَ
+                        الْعَلِيُّ الْعَظِيمُ</a>
+
+                </p>
+                <p id="reference">صحیح البخاری، فضائل القرآن، باب فضل سورۃ البقرۃ، حدیث: 5010</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">للہ وہ ذات ہے جس کے سوا کوئی سچا معبود نہیں وہ زندہ جاوید
+                    ہمیشہ قائم رہنے والا ہے۔ اسے اونگھ آتی ہے نہ نیند۔اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین
+                    میں ہے۔ کون ہے وہ جو اسکے ہاں اسکی اجازت کے بغیر (کسی کی) سفارش کرسکے؟ وہ ان چیزوں کو جانتا ہے جو ان
+                    کے سامنے ہیں اور جو انکے پیچھے ہیں۔ اور وہ (لوگ) اس کے علم میں سے کسی چیز پر دسترس نہیں رکھتے تاہم
+                    جس قدر وہ خود چاہے۔ اس کی کرسی حاوی ہے۔ آسمانوں اور زمین پر اور نہیں گراں گزرتی اسے حفاظت ان دونوں
+                    کی اور وہ بلند مرتبہ ہے عظمت والا ہے۔ </p>
+            </div>
+            <div class="dua">
+                <p class="times">جو شخص درج ذیل دو آیات رات کے وقت پڑھتا ہے تو یہ اس کے لیے کافی ہوجاتی ہیں</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AamaNarrasoolu/AamaNarrasoolu01.mp3', event)">اٰمَنَ
+                        الرَّسُوۡلُ بِمَاۤ اُنۡزِلَ اِلَیۡہِ مِنۡ رَّبِّہٖ
+                        وَ الۡمُؤۡمِنُوۡنَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AamaNarrasoolu/AamaNarrasoolu02.mp3', event)">کُلٌّ
+                        اٰمَنَ بِاللّٰہِ وَ مَلٰٓئِکَتِہٖ وَ کُتُبِہٖ وَ
+                        رُسُلِہٖ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AamaNarrasoolu/AamaNarrasoolu03.mp3', event)">لَا
+                        نُفَرِّقُ بَیۡنَ اَحَدٍ مِّنۡ رُّسُلِہٖ ۟</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AamaNarrasoolu/AamaNarrasoolu04.mp3', event)">وَ
+                        قَالُوۡا سَمِعۡنَا وَ اَطَعۡنَا ٭۫ غُفۡرَانَکَ
+                        رَبَّنَا وَ اِلَیۡکَ الۡمَصِیۡرُ ۲۸۵</a>
+                    <br>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/LaYuKalliFullahu/LaYuKalliFullahu01.mp3', event)">لَا
+                        یُکَلِّفُ اللّٰہُ نَفۡسًا اِلَّا وُسۡعَہَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/LaYuKalliFullahu/LaYuKalliFullahu02.mp3', event)">لَہَا
+                        مَا کَسَبَتۡ وَ عَلَیۡہَا مَا اکۡتَسَبَتۡ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/LaYuKalliFullahu/LaYuKalliFullahu03.mp3', event)">رَبَّنَا
+                        لَا تُؤَاخِذۡنَاۤ اِنۡ نَّسِیۡنَاۤ اَوۡ
+                        اَخۡطَاۡنَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/LaYuKalliFullahu/LaYuKalliFullahu04.mp3', event)">رَبَّنَا
+                        وَ لَا تَحۡمِلۡ عَلَیۡنَاۤ اِصۡرًا کَمَا
+                        حَمَلۡتَہٗ عَلَی الَّذِیۡنَ مِنۡ قَبۡلِنَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/LaYuKalliFullahu/LaYuKalliFullahu05.mp3', event)">رَبَّنَا
+                        وَ لَا تُحَمِّلۡنَا مَا لَا طَاقَۃَ لَنَا
+                        بِہٖ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/LaYuKalliFullahu/LaYuKalliFullahu06.mp3', event)">وَ
+                        اعۡفُ عَنَّا ٝ وَ اغۡفِرۡ لَنَا ٝ وَ ارۡحَمۡنَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/LaYuKalliFullahu/LaYuKalliFullahu07.mp3', event)">اَنۡتَ
+                        مَوۡلٰىنَا فَانۡصُرۡنَا عَلَی الۡقَوۡمِ
+                        الۡکٰفِرِیۡنَ ۲۸۶</a>
+                </p>
+                <p id="reference">البقرۃ 286,285:2، وصحیح البخاری، فضائل القرآن، باب فصل سورۃ البقرۃ، حدیث: 5009، وصحیح
+                    مسلم، صلاۃ المسافرین، باب فضل الفاتحۃ وخواتیم سورۃ البقرۃ، حدیث: 1878</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">’’رسول (صلی اللہ علیہ وآلہ وسلم) اس (ہدایت) پر ایمان لائے
+                    ہیں جو ان کے رب کی طرف سے ان پر نازل کی گئی ہے اور سارے مومن بھی، سب اللہ پر اور اس کے فرشتوں پر اور
+                    اس کی کتابوں پر اور اس کے رسولوں پر ایمان لائے ہیں۔ (وہ کہتے ہیں:) ہم اس کے رسولوں میں سے کسی ایک
+                    میں بھی فرق نہیں کرتے اور وہ کہتے ہیں۔
+                    <br>
+                    ہم نے (حکم) سنا اور اطاعت کی، اے ہمارے رب! ہم تیری بخشش چاہتے
+                    ہیں اور ہمیں تیری ہی طرف لوٹ کر آنا ہے۔ اللہ کسی کو اس کی برداشت سے بڑھ کر تکلیف نہیں دیتا، کسی شخص
+                    نے جو نیکی کمائی اس کا پھل اسی کے لیے ہے اور جو اس نے برائی کی اس کا وبال بھی اسی پر ہے۔ اے ہمارے
+                    رب! اگر ہم سے بھول چوک ہوجائے تو ہماری گرفت نہ کر، اے ہمارے رب! ہم پر ایسا بوجھ نہ ڈال جو تونے ہم سے
+                    پہلے لوگوں پر ڈالا تھا۔ اے ہمارے رب! جس بوجھ کو اٹھانے کی ہم میں طاقت نہیں، وہ ہم سے نہ اٹھوا اور ہم
+                    سے درگزر فرما اور ہمیں بخش دے اور ہم پر رحم فرما، تو ہی ہمارا کارساز ہے، پس تو کافروں کے مقابلے میں
+                    ہماری مدد فرما۔‘‘آمین
+                </p>
+            </div>
+            <div class="dua">
+                <p class="times">جو شخص بستر پر لیٹتے وقت 33 مرتبہ سبحان اللہ، 33 مرتبہ الحمدللّٰہ اور 34 مرتبہ اللہ
+                    اکبر کہے، یہ اس کے لیے ایک نوکر سے بہتر ہیں۔</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/SubhanAllahAlhamdulillahAllahuAkbar/SubahAllah.mp3', event)">سُبْحَانَ
+                        اللّٰہِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/SubhanAllahAlhamdulillahAllahuAkbar/Alhamdulillah.mp3', event)">اَلْحَمْدُلِلّٰہِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/SubhanAllahAlhamdulillahAllahuAkbar/AllahuAkbar.mp3', event)">اَللّٰہُ
+                        اَکْبَرُ</a>
+                </p>
+                <p id="reference">صحیح البخاری، الدعوات، باب التکبیر والتسبیح عند المنام، حدیث: 6318، وصحیح مسلم، الذکر
+                    والدعائ، باب التسبیح أول النھار وعندالنوم، حدیث: 6915</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اللہ پاک ہے، ہر تعریف اللہ کے لیے ہے، اللہ سب سے بڑا ہے۔
+                </p>
+            </div>
+            <div class="dua">
+                <p class="times">بستر پر لیٹنے سے پہلے اسے اچھی طرح جھاڑے۔ دائیں پہلو پر لیٹے اور دائیں رخسار کے نیچے
+                    دایاں ہاتھ رکھ کر یہ دعا پڑھے</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/BismiKallah/BismiKallah.mp3', event)">بِاسْمِکَ
+                        اللّٰھُمَّ اَمُوْتُ وَاَحْیَا</a>
+                </p>
+                <p id="reference">صحیح البخاری، الدعوات، باب مایقول إذا نام؟ حدیث: 6312، وصحیح مسلم، الذکر والدعائ، باب
+                    الدعاء عند النوم، حدیث: 6887، ومسند أحمد: 385/5 واللفظ لہ۔</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! تیرے ہی نام کے ساتھ میں مرتا اور زندہ ہوتا ہوں۔‘
+                </p>
+            </div>
+            <div class="dua">
+                <p class="times">جب تم میں سے کوئی شخص اپنے بستر سے اٹھے اور پھر دوبارہ اس کی طرف آئے تو اسے اپنی چادر
+                    کے دامن سے تین مرتبہ جھاڑے اور بِسْمِ اللّٰہِ کہے۔ کیا معلوم اس کے بعد اس پر کیا چیز آگئی ہے۔ اور جب
+                    لیٹے تو یہ دعا پڑھے</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/BismikaRabbi/BismikaRabbi01.mp3', event)">بِاسْمِکَ
+                        رَبِّیْ وَضَعْتُ جَنْۭبِیْ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/BismikaRabbi/BismikaRabbi02.mp3', event)">وَبِکَ
+                        اَرْفَعُہٗ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/BismikaRabbi/BismikaRabbi03.mp3', event)">اِنْ
+                        اَمْسَکْتَ نَفْسِیْ فَارْحَمْھَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/BismikaRabbi/BismikaRabbi04.mp3', event)">وَاِنْ
+                        اَرْسَلْتَھَا فَاحْفَظْھَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/BismikaRabbi/BismikaRabbi05.mp3', event)">بِمَا
+                        تَحْفَظُ بِہٖ عِبَادَکَ الصّٰلِحِیْنَ</a>
+                </p>
+                <p id="reference">صحیح البخاری، الدعوات، باب، حدیث: 6320، وصحیح مسلم، الذکر والدعائ، باب الدعاء عند
+                    النوم، حدیث: 6892</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے میرے رب! تیرے ہی نام کے ساتھ میں نے اپنا پہلو (بستر پر)
+                    رکھا اور تیرے ہی نام کے ساتھ اسے اٹھاؤں گا، لہٰذا اگر تو میری روح روک لے تو اس پر رحم فرمانا اور اگر
+                    تو اسے چھوڑ دے تو اس کی ایسے حفاظت فرمانا جیسے تو اپنے نیک بندوں کی حفاظت فرماتا ہے۔</p>
+            </div>
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaInnaKaKhalqtaNafsi/AllahumaInnaKaKhalqtaNafsi01.mp3', event)">اَللّٰھُمَّ
+                        اِنَّکَ خَلَقْتَ نَفْسِیْ وَاَنْتَ تَوَفَّاھَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaInnaKaKhalqtaNafsi/AllahumaInnaKaKhalqtaNafsi02.mp3', event)">لَکَ
+                        مَمَاتُھَا وَمَحْیَاھَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaInnaKaKhalqtaNafsi/AllahumaInnaKaKhalqtaNafsi03.mp3', event)">اِنْ
+                        اَحْیَیْتَھَا فَاحْفَظْھَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaInnaKaKhalqtaNafsi/AllahumaInnaKaKhalqtaNafsi04.mp3', event)">وَاِنْ
+                        اَمَتَّھَا فَاغْفِرْلَھَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaInnaKaKhalqtaNafsi/AllahumaInnaKaKhalqtaNafsi05.mp3', event)">اَللّٰھُمَّ
+                        اِنِّیْٓ اَسْئَلُکَ الْعَافِیَۃَ</a>
+                </p>
+                <p id="reference">صحیح مسلم، الذکر والدعائ، باب الدعاء عندالنوم، حدیث: 6888، ومسند أحمد: 79/2</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! تو نے میری روح پیدا فرمائی اور تو ہی اسے فوت کرے
+                    گا، تیرے ہی لیے (تیرے ہی قبضے میں) اس کی موت اور حیات ہے اگر تو اسے زندہ رکھے تو اس کی حفاظت فرمانا
+                    اور اگر تو اسے موت دے تو اسے معاف فرمانا۔ اے اللہ! بلاشبہ میں تجھ سے عافیت کا سوال کرتا ہوں۔</p>
+            </div>
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAslamtu/AllahumaAslamtu01.mp3', event)">اَللّٰھُمَّ
+                        اَسْلَمْتُ نَفْسِیْٓ اِلَیْکَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAslamtu/AllahumaAslamtu02.mp3', event)">وَفَوَّضْتُ
+                        اَمْرِیْٓ اِلَیْکَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAslamtu/AllahumaAslamtu03.mp3', event)">وَوَجَّھْتُ
+                        وَجْھِیْ اِلَیْکَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAslamtu/AllahumaAslamtu04.mp3', event)">وَاَلْجَاْتُ
+                        ظَھْرِیْ اِلَیْکَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAslamtu/AllahumaAslamtu05.mp3', event)">رَغْبَۃً
+                        وَّرَھْبَۃً اِلَیْکَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAslamtu/AllahumaAslamtu06.mp3', event)">لَا
+                        مَلْجَاَ وَلَا مَنْجَاَ مِنْکَ اِلَّآ اِلَیْکَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAslamtu/AllahumaAslamtu07.mp3', event)">اٰمَنْتُ
+                        بِکِتَابِکَ الَّذِیْٓ اَنْزَلْتَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAslamtu/AllahumaAslamtu08.mp3', event)">وَبِنَبِیِّکَ
+                        الَّذِیْٓ اَرْسَلْتَ</a>
+                </p>
+                <p id="reference">صحیح البخاری، الدعوات، باب مایقول إذا نام؟ حدیث: 6313، وصحیح مسلم، الذکر والدعائ، باب
+                    الدعاء عند النوم، حدیث: 6882</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! میں نے اپنا نفس تیرے تابع کردیا اور اپنا معاملہ
+                    تجھے سونپ دیا اور میں نے اپنا چہرہ تیری طرف متوجہ کیا اور اپنی پشت تیری طرف جھکائی (ثواب میں) رغبت
+                    کرتے ہوئے اور (تیرے عذاب سے) ڈرتے ہوئے، تیری بارگاہ کے سوا کوئی پناہ گاہ ہے نہ جائے نجات، میں تیری
+                    اس کتاب پر ایمان لایا جسے تونے نازل فرمایا اور تیرے اس نبی پر جسے تونے (ہماری طرف) بھیجا۔</p>
+            </div>
+            <div class="dua">
+                <p class="times">جب رسول اللہ صلی اللہ علیہ وآلہ وسلم سونا چاہتے تو اپنا دایاں ہاتھ اپنے دائیں رخسار کے
+                    نیچے رکھتے اور یہ دعا تین مرتبہ پڑھتے</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaQiniAzabak/AllahumaQiniAzabak.mp3', event)">اَللّٰھُمَّ
+                        قِنِیْ عَذَابَکَ یَوْمَ تَبْعَثُ عِبَادَکَ</a>
+                </p>
+                <p id="reference">سنن أبی داود، الأدب، باب مایقول عند النوم؟ حدیث: 5045</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ مجھے (اس دن) اپنے عذاب سے بچانا جس دن تو اپنے
+                    بندوں کو اٹھائے گا۔</p>
+            </div>
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAalimalGaibi/AllahumaAalimalGaibi01.mp3', event)">اَللّٰھُمَّ
+                        عَالِمَ الْغَیْبِ وَالشَّھَادَۃِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAalimalGaibi/AllahumaAalimalGaibi02.mp3', event)">فَاطِرَالسَّمٰوٰتِ
+                        وَالْاَرْضِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAalimalGaibi/AllahumaAalimalGaibi03.mp3', event)">رَبَّ
+                        کُلِّ شَیْءٍ وَمَلِیْکَہٗ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAalimalGaibi/AllahumaAalimalGaibi04.mp3', event)">اَشْھَدُ
+                        اَنْ لَّآ اِلٰہَ اِلَّا اَنْتَ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAalimalGaibi/AllahumaAalimalGaibi05.mp3', event)">اَعُوْذُبِکَ
+                        مِنْ شَرِّ نَفْسِیْ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAalimalGaibi/AllahumaAalimalGaibi06.mp3', event)">وَمِنْ
+                        شَرِّ الشَّیْطٰنِ وَشِرْکِہٖ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaAalimalGaibi/AllahumaAalimalGaibi07.mp3', event)">وَاَنْ
+                        اَقْتَرِفَ عَلٰی نَفْسِیْ سُوْٓءً ا اَوْ اَجُرَّہٗ
+                        اِلٰی مُسْلِمٍ</a>
+                </p>
+                <p id="reference">سنن أبی داود، الأدب، باب مایقول إذا أصبح؟ حدیث: 5083، وجامع الترمذی، باب منہ دعائ:
+                    اللّٰھم عالم الغیب…، حدیث: 3392</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! اے غیب اور حاضر کے جاننے والے! اے آسمانوں اور
+                    زمین کے پیدا کرنے والے! اے ہر چیزکے رب اور اس کے مالک! میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود
+                    نہیں، میں اپنے نفس کے شر سے اور شیطان کے شر اور اس کے شرک سے تیری پناہ چاہتا ہوں اور اس بات سے بھی
+                    کہ میں اپنے ہی نفس کے خلاف کسی برائی کا ارتکاب کروں یا اسے کسی مسلمان کی طرف کھینچ لاؤں۔</p>
+            </div>
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AlhamdulilahHillaziAttAmana/AlhamdulilahHillaziAttAmana01.mp3', event)">اَلْحَمْدُ
+                        لِلّٰہِ الَّذِیْٓ اَطْعَمَنَا وَسَقَانَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AlhamdulilahHillaziAttAmana/AlhamdulilahHillaziAttAmana02.mp3', event)">وَکَفَانَا
+                        وَاٰوَانَا</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AlhamdulilahHillaziAttAmana/AlhamdulilahHillaziAttAmana03.mp3', event)">فَکَمْ
+                        مِّمَّنْ لَّا کَافِیَ لَہٗ وَلَا مُوْوِیَ
+                    </a>
+                </p>
+                <p id="reference">صحیح مسلم، الذکر والدعائ، باب الدعاء عندالنوم، حدیث: 6894</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">ہر قسم کی تعریف اس اللہ کے لیے ہے جس نے ہمیں کھلایا اور
+                    پلایا اور ہمیں کافی ہوگیا اور ہمیں ٹھکانا دیا، (ورنہ) کتنے ہی ایسے لوگ ہیں جن کی نہ کوئی کافیت کرنے
+                    والا ہے اور نہ ٹھکانا دینے والا۔</p>
+            </div>
+            <div class="dua">
+                <p class="times">ایک (1) مرتبہ</p>
+                <p class="arabic">
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat01.mp3', event)">اَللّٰھُمَّ
+                        رَبَّ السَّمٰوٰتِ السَّبْعِ وَرَبَّ الْاَرْضِ وَرَبَّ الْعَرْشِ الْعَظِیْمِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat02.mp3', event)">رَبَّنَا
+                        وَرَبَّ کُلِّ شَیْءٍ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat03.mp3', event)">فَالِقَ
+                        الْحَبِّ وَالنَّوٰی</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat04.mp3', event)">وَمُنْزِلَ
+                        التَّوْرَاۃِ وَالْاِنْجِیْلِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat05.mp3', event)">وَالْفُرْقَانِ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat06.mp3', event)">اَعُوْذُبِکَ
+                        مِنْ شَرِّ کُلِّ شَیْءٍ اَنْتَ اٰخِذٌم بِنَاصِیَتِہٖ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat07.mp3', event)">اَللّٰھُمَّ
+                        اَنْتَ الْاَوَّلُ فَلَیْسَ قَبْلَکَ شَیْءٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat08.mp3', event)">وَّاَنْتَ
+                        الْاٰخِرُ فَلَیْسَ بَعْدَکَ شَیْءٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat09.mp3', event)">وَّاَنْتَ
+                        الظَّاھِرُ فَلَیْسَ فَوْقَکَ شَیْءٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat10.mp3', event)">وَّاَنْتَ
+                        الْبَاطِنُ فَلَیْسَ دُوْنَکَ شَیْءٌ</a>
+                    <a href="#"
+                        onclick="playVerse('Audio/soneSePehleKeAzkar/AllahumaRabbasSamawat/AllahumaRabbasSamawat11.mp3', event)">اِقْضِ
+                        عَنَّا الدَّیْنَ وَاَغْنِنَا مِنَ الْفَقْرِ</a>
+                </p>
+                <p id="reference">صحیح مسلم، الذکر والدعائ، باب الدعاء عندالنوم، حدیث: 6889</p>
+                <button class="showTranslationBtn">ترجمہ دیکھیں</button>
+                <p class="translation" style="display: none;">اے اللہ! ساتوں آسمانوں کے رب! اور زمین کے رب! اور عرشِ
+                    عظیم کے رب! اے ہمارے اور ہر چیز کے رب! اے دانے اور گٹھلیوں کو پھاڑنے والے! اور اے تورات و انجیل اور
+                    فرقان (قرآن) کو نازل کرنے والے! میں تجھ سے ہر اس چیز کے شر سے پناہ مانگتا ہوں جس کی پیشانی کو تو
+                    پکڑے ہوئے ہے۔ اے اللہ! تو ہی اوّل ہے، پس تجھ سے پہلے کوئی چیز نہیں اور تو ہی آخر ہے، پس تیرے بعد
+                    کوئی چیز نہیں اور تو ہی غالب ہے، پس تیرے اوپر کوئی چیز نہیں اور تو ہی باطن ہے، پس تجھ سے پوشیدہ کوئی
+                    چیز نہیں ہے، ہم سے (ہمارا) قرض ادا کردے اور ہمیں فقر سے نکال کر غنی بنادے۔</p>
+            </div>
+        </section>
+    </main>
+    <script>
+
+
+
+        let verseAudio = new Audio();
+        function playVerse(address, event) {
+            event.preventDefault();
+
+            verseAudio.src = address;
+
+            if (verseAudio.paused) {
+                verseAudio.play();
+
+            } else {
+                console.log("can't play")
+            }
+        }
+
+
+        let showTranslationBtns = document.querySelectorAll(".showTranslationBtn");
+        showTranslationBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                let translationPara = button.nextElementSibling;
+                if (translationPara.style.display == "none") {
+                    translationPara.style.display = "block";
+                    button.innerText = "ترجمہ بند کریں";
+
+                }
+                else {
+                    translationPara.style.display = "none";
+                    button.innerText = "ترجمہ دیکھیں";
+                }
+            })
+        })
+
+
+        // NAVBAR Settings 
+
+        // first I am selecting the nav links (anchor tag)
+        let navLinks = document.querySelectorAll("#navbar ul .nav-link");
+
+        // after selecting all links i user for each loop to iterate all links one by one
+        // navLinks is array of links
+        navLinks.forEach(link => {
+            // every link has click event 
+            link.addEventListener("click", () => {
+                // Three section for different times of azkars and every link is for one time of azkar when someone clicks a link that azkar will show others will hide
+
+                // only which section is shown have show class others are hidden
+                document.querySelectorAll("section").forEach(section => {
+                    section.classList.remove("show");
+                })
+                // active class is for highliting link which is shown
+                document.querySelectorAll("#navbar ul .nav-link a").forEach(a => {
+                    a.classList.remove("active");
+                })
+
+                link.firstElementChild.classList.add("active");
+                let sectionClass = link.classList[1];
+                let section = document.querySelectorAll("." + sectionClass)[1];
+                section.classList.add("show");
+
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>
