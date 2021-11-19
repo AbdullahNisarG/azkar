@@ -3124,7 +3124,9 @@
       let duaArabixText = parentElement.getElementsByClassName("arabic")[0].innerText;
       let duaTranslationText = parentElement.getElementsByClassName("translation")[0].innerText;
 
-      let duaContentForSharing = `${duaTimesText}\n${duaArabixText}\n${duaTranslationText}`;
+      let duaContentForSharing = `${duaTimesText}
+      ${duaArabixText}
+      ${duaTranslationText}`;
 
       btn.addEventListener('click', () => {
           if (navigator.share) {
