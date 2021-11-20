@@ -86,6 +86,7 @@
       margin: 30px 0px;
       border-radius: 8px;
       padding: 8px 4px;
+      position: relative;
     }
 
     /* Every Third Dua's background will be #42275e starts from first */
@@ -108,6 +109,8 @@
 
     #mainContent section .dua .buttons {
       display: flex;
+      position: absolute;
+      top: 10px;
     }
 
     #mainContent section .dua .buttons .btn {
@@ -3113,6 +3116,10 @@
     </section>
   </main>
   <script>
+    // temporary hiding play buttons
+    document.querySelectorAll(".buttons .togglePlay").forEach(btn=>{
+      btn.style.display = "none";
+    })
 
     // Making Share button for sharing dua's on other platforms like whatsapp and facebook
     let shareButtons = document.querySelectorAll(".buttons .share");
@@ -3133,11 +3140,9 @@
             navigator.share({
             text: duaContentForSharing,
             url: 'https://abdullahnisarg.github.io/azkar'
-          })
-              .then(() => console.log('Share was successful.'))
-              .catch((error) => console.log('Sharing failed', error));
+          }) 
           } else {
-            console.log(`Your system doesn't support sharing files.`);
+            alert(`Your browser does not support sharing!`);
           }
       })
 
