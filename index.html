@@ -13,7 +13,6 @@
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
   <title>دعائیں اور اذکار</title>
-
   <style>
     * {
       margin: 0;
@@ -2725,11 +2724,6 @@
     </section>
   </main>
   <script>
-    // temporary hiding play buttons
-    document.querySelectorAll(".buttons .togglePlay").forEach(btn=>{
-      btn.style.display = "none";
-    })
-
     // Making Share button for sharing dua's on other platforms like whatsapp and facebook
     let shareButtons = document.querySelectorAll(".buttons .share");
 
@@ -2757,15 +2751,31 @@
 
     })
 
+    // Full Dua player settings
+    const fullDuasPlayerArr = document.querySelectorAll("audio");
+    // pauseAllFullDuaPlayers is made for pausing All duas when a verse is played or another dua is played;
+    function pauseAllFullDuaPlayers(playDuaSrc = "") {
+      fullDuasPlayerArr.forEach(audioElem => {
+        if (playDuaSrc != audioElem.src) {
+          audioElem.pause();
+        }
+      })
+    }
+    // code below pauses verse if an dua is played
+    fullDuasPlayerArr.forEach(audioElem => {
+      audioElem.addEventListener("play", ({target})=> {
+        // here pauseAllFullDuaPlayers with target.src is used it will pause all another duas if they are playing except one clicked;
+        pauseAllFullDuaPlayers(target.src)
+        verseAudio.pause();
+      })
+    })
+
     let verseAudio = new Audio();
     function playVerse(address, event) {
       event.preventDefault();
-
+      pauseAllFullDuaPlayers();
       verseAudio.src = address;
-
-      if (verseAudio.paused) {
-        verseAudio.play();
-      }
+      verseAudio.play();
     }
 
     let showTranslationBtns = document.querySelectorAll(
